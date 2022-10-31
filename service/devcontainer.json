@@ -1,0 +1,21 @@
+{
+	"name": "CPP compilation env",
+	"dockerFile": "Dockerfile",
+	// Uncomment this line and comment out the "image" to iterate on the container
+	// "image": "mcr.microsoft.com/vscode/devcontainers/repos/microsoft/vscode:dev",
+	
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home-local/durga/work/tps-system,type=bind,consistency=cached",
+	"workspaceFolder": "/home-local/durga/work/tps-system",
+	"overrideCommand": false,
+	
+	"extensions": [
+
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"postCreateCommand": "",
+	// Comment out the next line to run as root instead. Linux users, update
+	// Dockerfile with your user's UID/GID if not 1000.
+	"runArgs": [ "-u", "root" ]
+}
